@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Add Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- If using .ico format -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Background Remover</h1>
+
+        <!-- Drag & Drop / File Upload -->
+        <div id="drop-area">
+            <p>Drag & Drop an image or <label for="file-input" class="upload-label">Click to Upload</label></p>
+            <input type="file" id="file-input" accept="image/*" hidden>
+        </div>
+
+        <!-- Loading Animation -->
+        <div id="loading">
+            <div class="loading-animation">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p>Processing image, please wait...</p>
+        </div>
+
+        <!-- Image Preview -->
+        <div id="preview-container">
+            <img id="preview-image" alt="Processed Image">
+        </div>
+
+        <!-- Buttons -->
+        <div id="buttons">
+            <button id="download-btn">Download PNG</button>
+            <button id="remove-watermark-btn">Remove Watermark</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
